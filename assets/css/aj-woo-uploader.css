@@ -1,0 +1,250 @@
+/* Container für das Formular */
+.upload-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.upload-header {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.upload-area {
+  border: 2px dashed #0073aa;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: #555;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.upload-area.dragover {
+  background-color: #e0f7fa;
+  border-color: #0288d1;
+  color: #0288d1;
+}
+
+.upload-list {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.upload-list li {
+  background: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upload-list li .file-name {
+  font-size: 16px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 400px;
+}
+
+.upload-list li .status {
+  font-size: 14px;
+  color: #4caf50;
+}
+
+#progress-bar {
+  width: 100%;
+  background-color: #f0f0f0;
+  height: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: none; /* Wird nur angezeigt, wenn der Upload läuft */
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+/* Der Standardzustand des Eingabefeldes */
+#file-input {
+  display: none;
+}
+
+/* Wenn es im Hochladen-Status ist, wird das Eingabefeld ebenfalls versteckt */
+#upload-area.uploading #file-input {
+  display: none;
+}
+
+/* Option: Wenn es versteckt wird, könnte man einen "Neuen Upload"-Button anzeigen */
+#upload-area.uploaded {
+  display: none; /* Zeigt den Uploadbereich an, wenn abgeschlossen */
+}
+
+/* Grundlegendes Design */
+.uploaded-file {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uploaded-file .file-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.uploaded-file .status {
+  font-size: 14px;
+
+  font-weight: normal;
+}
+
+.uploaded-file .download-link {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  border: 1px solid #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.uploaded-file .download-link:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.empty-message {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+}
+
+/* PRODUCT FIELDS START */
+
+.aj-upload-dimension-container {
+  display: flex;
+  gap: 20px; /* Abstand zwischen den Feldern */
+  margin-top: 15px;
+}
+
+.aj-upload-dimension-field {
+  width: 100%;
+}
+
+.aj-upload-dimension-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.aj-upload-dimension-field input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Divider (Strich) nach den Eingabefeldern */
+.aj-upload-divider {
+  border-top: 2px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Preisbereich (rechts ausgerichtet) */
+.aj-upload-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Links ausrichten */
+}
+
+.aj-upload-price-line {
+  display: flex;
+  justify-content: space-between; /* Preis Text links, Preis rechts */
+  width: 100%;
+}
+
+.aj-upload-price-text {
+  text-align: left;
+  font-size: 24px; /* Optional: Schriftgröße für den Text */
+  color: #111;
+  font-weight: 700;
+}
+
+.aj-upload-price {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 24px; /* Optional: Schriftgröße für den Preisbetrag */
+  font-weight: 700; /* Optional: Gewicht für den Preisbetrag */
+  color: #111;
+}
+.aj-upload-price-per-item {
+  text-align: right; /* Macht "pro stk." rechtsbündig */
+  margin-top: 5px; /* Abstand zum Preis */
+  font-size: 0.9em;
+  color: #555; /* Optional, damit "pro stk." etwas weniger auffällig ist */
+}
+
+/* PRODUCT FIELDS END */
+
+/* DISCOUNT TABLE START */
+
+.aj-upload-discount-table {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+}
+
+.aj-upload-table-title {
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Zeilen und Zellen Styling */
+.aj-upload-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1px 0;
+  margin: 0;
+}
+
+.aj-upload-cell {
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  margin: 0;
+}
+
+/* Styling für den hr mit der Klasse aj-separator */
+.aj-upload-separator {
+  margin: 10px 0;
+}
+
+/* Standardmäßig versteckte Zeilen */
+.aj-upload-hidden {
+  display: none;
+}
+
+/* DISCOUNT TABLE END */
